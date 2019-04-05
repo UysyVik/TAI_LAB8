@@ -1,26 +1,34 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import {HomeComponent} from "./components/home/home.component";
+import {ContactComponent} from "./components/contact/contact.component";
+import {BlogComponent} from "./components/blog/blog.component";
+import {QuizComponent} from "./components/quiz/quiz.component";
+import { NavbarComponent } from './navbar/navbar.component';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { BlogComponent } from './components/blog/blog.component';
-import { QuizComponent } from './components/quiz/quiz.component';
-import { ContactComponent } from './components/contact/contact.component';
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+  },
+  {
+    path: 'blog',
+    component: BlogComponent,
+  },
+  {
+    path: 'quiz',
+    component: QuizComponent,
+  }];
+
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    BlogComponent,
-    QuizComponent,
-    ContactComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  declarations: [NavbarComponent]
 })
-export class AppModule { }
+export class AppRoutingModule { }
