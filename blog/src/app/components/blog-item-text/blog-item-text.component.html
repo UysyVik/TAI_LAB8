@@ -1,4 +1,10 @@
-
-<p>
-  {{text | summary:35}}
+<div class="card" style="width:27.3rem;">
+<div class="card-body">
+<p class="card-text">
+  {{ text }}
 </p>
+  <a class="btn btn-primary" [routerLink]="['/blog/detail/', id]">
+    Więcej
+  </a>
+</div>
+</div>

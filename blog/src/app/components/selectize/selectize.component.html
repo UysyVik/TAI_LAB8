@@ -1,0 +1,9 @@
+<input #input type="text" placeholder="Wpisz nazwe..." class="form-control">
+<div class="card-wrapper">
+  <div class="custom-card">
+  <ul>
+    <li *ngFor="let p of posts$" class="form-control">
+      <a href="#" [routerLink]="['/blog/detail/', p.id]"> {{ p.text | summary: 40 }}</a></li>
+  </ul>
+  </div>
+</div>

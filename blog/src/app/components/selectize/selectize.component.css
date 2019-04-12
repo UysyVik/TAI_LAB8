@@ -1,0 +1,12 @@
+.card-wrapper {
+  position: relative;
+  z-index: 99;
+}
+
+.custom-card {
+  position: absolute;
+}
+
+li {
+  width: 400px;
+}
